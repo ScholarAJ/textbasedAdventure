@@ -20,7 +20,7 @@ public class InputLexer {
     <Obj> -> String */
 
     // Method to break user input into tokens
-    public ArrayList<Token> tokenize(String input) {
+    public static ArrayList<Token> tokenize(String input) {
         
         // Creates ArrayList to store tokens
         ArrayList<Token> tokenList = new ArrayList<Token>();
@@ -74,7 +74,7 @@ public class InputLexer {
     }
 
     // Method to assign token for command
-    public Token assignCmdToken(String lexeme) {
+    private static Token assignCmdToken(String lexeme) {
 
         // Declare token variable
         Token token;
@@ -109,7 +109,7 @@ public class InputLexer {
     }
 
     // Method to assign token for parameter
-    public Token assignParamToken(Token cmdToken, String lexeme) {
+    private static Token assignParamToken(Token cmdToken, String lexeme) {
 
         // Initialize token variable with value of UNKNOWN (keeps value if no valid commands match)
         Token token = Token.UNKNOWN;
