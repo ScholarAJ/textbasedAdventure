@@ -421,8 +421,9 @@ public class testLexer {
 
             () -> {
 
-                checkList = new ArrayList<>();
+                checkList = new ArrayList<Token>();
                 checkList.add(Token.INVALID);
+                checkList.add(Token.EOF);
 
                 input = "invCmd";
         
@@ -432,9 +433,10 @@ public class testLexer {
 
             () -> {
 
-                checkList = new ArrayList<>();
+                checkList = new ArrayList<Token>();
                 checkList.add(Token.INVALID);
                 checkList.add(Token.UNKNOWN);
+                checkList.add(Token.EOF);
 
                 input = "invCmd param";
         
@@ -448,8 +450,9 @@ public class testLexer {
 
             () -> {
 
-                checkList = new ArrayList<>();
+                checkList = new ArrayList<Token>();
                 checkList.add(Token.INVALID);
+                checkList.add(Token.EOF);
 
                 input = "invCmd";
         
@@ -459,9 +462,65 @@ public class testLexer {
 
             () -> {
 
-                checkList = new ArrayList<>();
+                checkList = new ArrayList<Token>();
                 checkList.add(Token.INVALID);
                 checkList.add(Token.UNKNOWN);
+                checkList.add(Token.EOF);
+
+                input = "invCmd param";
+        
+                assertIterableEquals(checkList, InputLexer.tokenize(input), "Token for \"" + input + "\" should be invalid followed by unknown");
+
+            },
+
+            () -> {
+
+                checkList = new ArrayList<Token>();
+                checkList.add(Token.MOVE);
+                checkList.add(Token.UNKNOWN);
+                checkList.add(Token.EOF);
+
+                input = "move unknown";
+
+                assertIterableEquals(checkList, InputLexer.tokenize(input), "Token for \"" + input + "\" should be move command followed by unknown");
+
+            },
+
+            () -> {
+
+                checkList = new ArrayList<Token>();
+                checkList.add(Token.MOVE);
+                checkList.add(Token.UNKNOWN);
+                checkList.add(Token.EOF);
+
+                input = "MOVE unknown";
+
+                assertIterableEquals(checkList, InputLexer.tokenize(input), "Token for \"" + input + "\" should be move command followed by unknown");
+
+            }
+
+        );
+
+        assertAll("Take cmd", 
+
+            () -> {
+
+                checkList = new ArrayList<Token>();
+                checkList.add(Token.INVALID);
+                checkList.add(Token.EOF);
+
+                input = "invCmd";
+
+                assertIterableEquals(checkList, InputLexer.tokenize(input), "Token for \"" + input + "\" should be invalid");
+
+            },
+
+            () -> {
+
+                checkList = new ArrayList<Token>();
+                checkList.add(Token.INVALID);
+                checkList.add(Token.UNKNOWN);
+                checkList.add(Token.EOF);
 
                 input = "invCmd param";
         
@@ -471,9 +530,34 @@ public class testLexer {
 
         );
 
-        assertAll("Take cmd");
+        assertAll("Use cmd", 
 
-        assertAll("Use cmd");
+            () -> {
+
+                checkList = new ArrayList<Token>();
+                checkList.add(Token.INVALID);
+                checkList.add(Token.EOF);
+
+                input = "invCmd";
+
+                assertIterableEquals(checkList, InputLexer.tokenize(input), "Token for \"" + input + "\" should be invalid");
+
+            },
+
+            () -> {
+
+                checkList = new ArrayList<Token>();
+                checkList.add(Token.INVALID);
+                checkList.add(Token.UNKNOWN);
+                checkList.add(Token.EOF);
+
+                input = "invCmd param";
+        
+                assertIterableEquals(checkList, InputLexer.tokenize(input), "Token for \"" + input + "\" should be invalid followed by unknown");
+
+            }
+
+        );
 
     }
 
