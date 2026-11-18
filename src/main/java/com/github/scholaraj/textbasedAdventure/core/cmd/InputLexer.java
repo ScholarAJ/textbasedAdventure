@@ -41,30 +41,36 @@ public class InputLexer {
         if (cmdToken == Token.LOOK) {
 
             // If lexeme is "at" or "AT", ignore and assign token for parameter of next lexeme
-            if (userCmd[1].equals("at") || userCmd[1].equals("AT")) {
+            if (2 < userCmd.length && (userCmd[1].equals("at") || userCmd[1].equals("AT"))) {
 
                 paramToken = assignParamToken(cmdToken, userCmd[2]);
+
+                // Add paramToken to tokenList
+                tokenList.add(paramToken);
 
             }
 
             // Otherwise, assign token for parameter of current lexeme
-            else {
+            else if (1 < userCmd.length) {
 
                 paramToken = assignParamToken(cmdToken, userCmd[1]);
+
+                // Add paramToken to tokenList
+                tokenList.add(paramToken);
 
             }
 
         }
 
         // Otherwise, assign token for parameter after command
-        else {
+        else if (1 < userCmd.length) {
 
             paramToken = assignParamToken(cmdToken, userCmd[1]);
+            
+            // Add paramToken to tokenList
+            tokenList.add(paramToken);
         
         }
-
-        // Add paramToken to tokenList
-        tokenList.add(paramToken);
 
         // Add EOF token
         tokenList.add(Token.EOF);
