@@ -6,7 +6,7 @@ public class InputLexer {
     
     /* Class that breaks player commands into useable tokens */
 
-    /* Grammar for the following class is: 
+    /* Grammar for game's command structure is: 
     
     <Command> -> (<Look> | <Move> | <Take> | <Use> )
 
@@ -27,6 +27,11 @@ public class InputLexer {
 
         // Creates String array to store parts of user input
         String[] userCmd = input.split(" ");
+
+        // For loop to normalize whitespace
+        for (int i = 0; i < userCmd.length; i++) {
+            userCmd[i] = userCmd[i].trim();
+        }
 
         // Assign command token to variable
         Token cmdToken = assignCmdToken(userCmd[0]);
