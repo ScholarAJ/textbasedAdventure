@@ -5,10 +5,14 @@ import java.util.ArrayList;
 // Class representing player object
 public class Player {
 
+    // Player's name
     private String playerName;
+    // Last room player was in
     private Room lastRoom;
+    // Player's inventory 
     private ArrayList<Item> playerInv;
 
+    // Constructor for player with specified inventory
     public Player(String name, ArrayList<Item> inventory, Room startRoom) {
 
         playerName = name;
@@ -17,6 +21,7 @@ public class Player {
 
     }
 
+    // Constructor for player with empty inventory
     public Player(String name, Room startRoom) {
 
         playerName = name;
@@ -25,18 +30,23 @@ public class Player {
 
     }
 
+    // Getter for playerName
     public String getName() {
         return playerName;
     }
 
+    // Getter for lastRoom
     public Room getLastRoom() {
         return lastRoom;
     }
 
+    // Setter for lastRoom
     public void setLastRoom(Room newRoom) {
         lastRoom = newRoom;
     }
 
+    /* Getter for playerInv 
+    Returns copy of ArrayList */
     public ArrayList<Item> getInv() {
 
         ArrayList<Item> copyInv = new ArrayList<Item>();
@@ -47,10 +57,12 @@ public class Player {
 
     }
 
+    // Method to add item to playerInv
     public void addItem(Item item) {
         playerInv.add(item);
     }
 
+    // Method to remove item from playerInv
     public Item removeItem(String itemName) {
         
         Item removedItem = null;

@@ -5,12 +5,17 @@ import java.util.ArrayList;
 // Class representing room object
 public class Room {
 
+    // Name of room
     private String roomName;
+    // Description of room
     private String roomDesc;
 
+    // Environment of room (stores entities)
     private ArrayList<Obj> roomEnv;
+    // Inventory of room (stores items)
     private ArrayList<Item> roomInv;
 
+    // Variables for adjacent rooms 
     private Room northAdj;
     private Room southAdj;
     private Room eastAdj;
@@ -26,14 +31,18 @@ public class Room {
 
     }
 
+    // Getter for roomNate
     public String getRoomName() {
         return roomName;
     }
 
+    // Getter for roomDesc
     public String getRoomDesc() {
         return roomDesc;
     } 
 
+    /* Getter for roomInv 
+    Returns copy of ArrayList */
     public ArrayList<Item> getRoomInv() {
 
         ArrayList<Item> copyInv = new ArrayList<Item>();
@@ -44,10 +53,12 @@ public class Room {
 
     }
 
+    // Method to add item to roomInv
     public void addRoomItem(Item item) {
         roomInv.add(item);
     }
 
+    // Method to remove item from roomInv
     public Item removeRoomItem(String itemName) {
         
         Item removedItem = null;
@@ -67,6 +78,8 @@ public class Room {
 
     }
 
+    /* Getter for roomEnv 
+    Returns copy of ArrayList */
     public ArrayList<Obj> getRoomEnv() {
 
         ArrayList<Obj> copyEnv = new ArrayList<Obj>();
@@ -77,10 +90,12 @@ public class Room {
 
     }
 
+    // Method to add obj to roomEnv
     public void addRoomObj(Obj obj) {
         roomEnv.add(obj);
     }
 
+    // Method to remove obj from roomEnv
     public Obj removeRoomObj(String objName) {
         
         Obj removedObj = null;
@@ -100,37 +115,44 @@ public class Room {
 
     }
 
+    // Getter for northAdj
     public Room getNorth() {
         return northAdj;
     }
 
+    // Setter for northAdj
     public void setNorth(Room northRoom) {
         northAdj = northRoom;
     }
 
+    // Getter for southAdj
     public Room getSouth() {
         return southAdj;
     }
 
+    // Setter for southAdj
     public void setSouth(Room southRoom) {
         southAdj = southRoom;
     }
 
+    // Getter for eastAdj
     public Room getEast() {
         return eastAdj;
     }
 
+    // Setter for eastAdj
     public void setEast(Room eastRoom) {
         eastAdj = eastRoom;
     }
 
+    // Getter for westAdj
     public Room getWest() {
         return westAdj;
     }
 
+    // Setter for westAdj
     public void setWest(Room westRoom) {
         westAdj = westRoom;
     }
-    
 
 }
