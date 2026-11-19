@@ -37,7 +37,13 @@ public class Player {
         lastRoom = newRoom;
     }
 
-    public ArrayList<Room> getInv() {
+    public ArrayList<Item> getInv() {
+
+        ArrayList<Item> copyInv = new ArrayList<Item>();
+
+        copyInv.addAll(playerInv);
+
+        return copyInv;
 
     }
 
@@ -49,7 +55,16 @@ public class Player {
         
         Item removedItem = null;
 
-        
+        for (int i = 0; i < playerInv.size(); i++) {
+
+            Item currItem = playerInv.get(i);
+
+            if (currItem.getName() == itemName) {
+                playerInv.remove(i);
+                removedItem = currItem;
+            }
+
+        }
 
         return removedItem;
 
