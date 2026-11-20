@@ -1,0 +1,12 @@
+1st_Floor
+You step through the large, bulky double-doors of the castle foyer. You find yourself 
+in a vast, open space surrounded by painted walls, each decorated with colorful symbols like
+moons and stars. Above you is a dark blue ceiling speckled with glittering dots. The floor is 
+tiled, with a glossy black-and-white checkerboard design. To the west is a tall staircase with 
+red carpet and ornate rails. At the top of this staircase is another door, adorned with a large 
+golden star and a strange octagonal keyhole. To the south is a spiral stone staircase leading 
+to a dark cellar. To the north is a set of three more doors, but only a spruce door in the center 
+appears useable. The others are boarded up and nailed down. To the east is the door you came through.
+Adjacent_Rooms: N- Art_Gallery, S- Cellar, E- Courtyard, W- 2nd_Floor
+Environment: Star_Door, Staircase, Spiral_Staircase, Spruce_Door
+Inventory: None  

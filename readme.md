@@ -4,7 +4,7 @@ A custom adventure game made in Java with a command-line interface.
 
 #Description
 
-A text-based adventure game I decided to make using Maven, with JavaFX and JUnit as dependencies.
+A text-based adventure game I decided to make using Maven, using JUnit as a dependency for testing.
 
 #Installation
 

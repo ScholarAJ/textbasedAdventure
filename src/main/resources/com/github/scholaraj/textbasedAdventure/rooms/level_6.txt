@@ -1,0 +1,8 @@
+Cellar 
+As you venture down the stairs into the cellar, you realize that it is almost
+pitch-black at the bottom. You cannot see anything except for the vague outline
+of a gargoyle statue. There are no doors that you can make out, but it is 
+entirely possible that it is too dark to see them.
+Adjacent_Rooms: N- 1st_Floor
+Environment: Statue, Rug, Wall_Mount
+Inventory: Flame_Ruby, Shield

@@ -1,0 +1,12 @@
+Courtyard 
+You have arrived at the grounds of a large, mysterious-looking castle.
+The same pines from the forest stand tall like sentinels guarding the property.
+The sky is overcast, a cool, howling wind brushing against your light clothing.
+The courtyard has little signs of life. Human life, that is. To your west lies the 
+castle moat, which appears emptied, yet covered with vines and moss. A large, 
+dilapidated bridge stretches out from the castle, the cobblestone structure looking worn
+and loose. Further to your north is a small lake, with a few fish paddling in the water. To 
+the south is the forest from which you came. 
+Adjacent_Rooms: S- Forest, N- Lake, W- 1st_Floor
+Environment: Moat, Bridge, Castle, Lake
+Inventory: None

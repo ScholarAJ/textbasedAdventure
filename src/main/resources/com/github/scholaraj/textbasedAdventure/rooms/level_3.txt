@@ -1,0 +1,10 @@
+Lake
+You step down onto a sandy shore, your shoes making light prints behind you.
+Strangely, another trail of shoeprints indicates that another has been
+here before you. Next to you lies a large shovel, and in front of you appears to
+be the corner of a wooden chest, just peeking out of the sand. You can see a large,
+rainbow-scaled fish splashing beneath the surface of the lake. Its speed is quite 
+remarkable. 
+Adjacent_Rooms: S- Courtyard
+Environment: Chest, Fish, Prints 
+Inventory: Key_2, Trident, Diamond_Tear

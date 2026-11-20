@@ -1,0 +1,13 @@
+Art_Gallery
+When you pass through the plain spruce door, you find yourself in an L-shaped corridor with
+red carpet and pearly white walls. The walls are decorated with gold trim, as well as frames
+of different shapes and sizes. One catches your eye. It's a small rectangular frame, but the
+canvas appears totally blank. There's a bulge in the center, as if something is hidden 
+behind it. Attached to the wall ext to it is a large torch. There is also a bookshelf 
+around the corner, packed with books on various subjects such as alchemy, magic, and the 
+history of different kingdoms. A golden book is slightly loose from the rest, as if someone 
+had recently read it. Atop the bookshelf are a collection of vials, one of which is filled 
+with a strange green liquid.
+Adjacent_Rooms: S- 1st_Floor
+Environment: Bookshelf, Gold_Book, Blank_Frame
+Inventory: Octa_Key, Grn_Vial, Torch   

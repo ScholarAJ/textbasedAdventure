@@ -1,0 +1,12 @@
+Forest
+You are in a small clearing, surrounded by pine trees and wildlife. Beams of sunshine
+pierce through the pine needles, making this otherwise desolate scene pleasant.
+You are completely alone, save for the local plants and fauna. On the ground
+in front of you lies a small diary with a lock on the cover. To the east is 
+a large oak tree, whose roots protrude from under a small hill. Under this tree are
+a few small stones, but one of them looks oddly round. To the west is a sleeping troll, 
+who snores ominously. Straight ahead to the north is a path through the trees, leading to 
+a courtyard.
+Adjacent_Rooms: N- Courtyard 
+Environment: Tree, Troll, Stone  
+Inventory: Lckd_Diary, Key_1
